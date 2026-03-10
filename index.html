@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ReciclaJoinville</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <div class="container pt-1 pb-1">
+    <a class="navbar-brand" href="#">ReciclaJoinville</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+         <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+    </svg>
+    </button>
+    <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item d-block d-md-none d-lg-none">
+                <a href="#" type="button" class="btn btn-orange w-100 rounded-0">Login</a>
+            </li>
+            <li class="nav-item d-none d-md-block d-lg-block">
+                <a href="#" type="button" class="btn btn-orange rounded-0 ps-lg-5 pe-lg-5">Login</a>
+            </li>
+        </ul>
+      
+  </div>
+</nav>
+
+
+<main class="w-100 background-banner-search d-flex align-items-center" >
+    <div class="container">
+        <div class="card rounded-1 border-0 p-1 pt-4 pb-4 p-lg-4 p-md-0 pb-lg-0 shadow">
+            <div class="card-body">
+                <form class="p-lg-2" onsubmit= "return false;">
+                    <div class="row">
+                    
+                        <div class="col-12 mb-3">
+                            <label for="localizacao" class="form-label fw-bold">Localização</label>
+                            <input type="text"
+                             class="form-control rounded-0" 
+                             name="localizacao" 
+                             id="localizacao" 
+                             placeholder="Digite sua localização">
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label for="nome" class="form-label fw-bold">Nome</label>
+                            <input type="text"
+                             class="form-control rounded-0" 
+                             name="nome" 
+                             id="nome" 
+                             placeholder="Digite seu nome">
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label for="email" class="form-label fw-bold">E-mail</label>
+                            <input type="email"
+                             class="form-control rounded-0" 
+                             name="email" 
+                             id="email" 
+                             placeholder="Digite seu e-mail">
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label for="data_coleta" class="form-label fw-bold">Data para Coleta</label>
+                            <input type="date"
+                             class="form-control rounded-0" 
+                             name="data_coleta" 
+                             id="data_coleta">
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label for="periodo" class="form-label fw-bold">Período</label>
+                            <select class="form-select rounded-0" name="periodo" id="periodo">
+                                <option value="" disabled selected>Selecione o período</option>
+                                <option value="manha">Manhã</option>
+                                <option value="tarde">Tarde</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label for="tipo_residuo" class="form-label fw-bold">Tipo de Resíduo</label>
+                            <select class="form-select rounded-0" name="tipo_residuo" id="tipo_residuo">
+                                <option value="" disabled selected>Selecione o tipo de resíduo</option>
+                                <option value="plastico">Plástico</option>
+                                <option value="papel">Papel</option>
+                                <option value="vidro">Vidro</option>
+                                <option value="metal">Metal</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label for="tipo_coleta" class="form-label fw-bold">Tipo de Coleta</label>
+                            <select class="form-select rounded-0" name="tipo_coleta" id="tipo_coleta">
+                                <option value="" disabled selected>Selecione o tipo de coleta</option>
+                                <option value="domiciliar">Domiciliar</option>
+                                <option value="comercial">Comercial</option>
+                                <option value="ponto_coleta">Ponto de Coleta</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12 col-md-12 col-lg-2 mb-3 pt-3 d-lg-flex align-items-end">
+                                <a href="./result.html" class="btn btn-lg btn-orange w-100 rounded-0 border-0 p-lg-1">
+                                    Agendar Coleta
+                                </a>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+
+<main class="w-100 pb-5 pt-lg-4 pb-lg-5">
+    <div class="container pt-5 pb-2 pt-lg-5 pb-lg-0">
+        <h1 class="fs-4 text-center text-lg-start mb-5 fw-bold">
+            Faça parte da equipe!
+        </h1>
+        <div class="row mb-4">
+            <div class="col-12 col-md-12 col-lg-4 mb-5">
+                <div class="card shadow border-0">
+                <div class="position-relative">
+                        <img src="./assets/img/imagem-recicla.jpg" alt="recicla02" class="card-img-top">
+                        <span class="position-absolute
+                        bottom-0
+                        right-0 
+                        bg-orange 
+                        ps-2 
+                        pe-2
+                        pt-1 
+                        pb-1">
+                            1 min de leitura
+                    </span>
+                </div>
+                <div class="card-body  p-3">
+                    <h5 class="card-title">TRABALHE CONOSCO / FAÇA PARTE</h5>
+                    <p class="text-muted"> Faça Parte da Nossa Rede</p>
+                    <p class="card-text">
+                         Preencha seus dados para oportunidades de trabalho ou voluntariado no setor da reciclagem.
+                    </p>
+                    <a href="./unavailable.html" class="btn btn-orange rounded-0">Preencher Formulário</a>
+                </div>
+            </div>
+        </div>
+
+
+         <div class="col-12 col-md-12 col-lg-4 mb-5">
+                <div class="card shadow border-0">
+                <div class="position-relative">
+                        <img src="./assets/img/FOTO-RECICLAGEM1.jpg" alt="recicla02" class="card-img-top">
+                        <span class="position-absolute
+                        bottom-0
+                        right-0 
+                        bg-orange 
+                        ps-2 
+                        pe-2
+                        pt-1 
+                        pb-1">
+                            1 min de leitura
+                    </span>
+                </div>
+                <div class="card-body  p-3">
+                    <h5 class="card-title">PARCEIROS DA RECICLAGEM</h5>
+                    <p class="text-muted"> Seja um Parceiro da Reciclagem</p>
+                    <p class="card-text">
+                        Sua empresa pode apoiar o projeto de diversas formas.
+                    </p>
+                    <a href="./available.html" class="btn btn-orange rounded-0">Preencher Formulário</a>
+                </div>
+            </div>
+        </div>
+    <div class="col-12 col-md-12 col-lg-4 mb-5">
+                <div class="card shadow border-0">
+                <div class="position-relative">
+                        <img src="./assets/img/image.jpg" alt="recicla02" class="card-img-top">
+                        <span class="position-absolute
+                        bottom-0
+                        right-0 
+                        bg-orange 
+                        ps-2 
+                        pe-2
+                        pt-1 
+                        pb-1">
+                            1 min de leitura
+                    </span>
+                </div>
+                <div class="card-body  p-3">
+                    <h5 class="card-title">DENÚNCIA AMBIENTAL</h5>
+                    <p class="text-muted"> Denuncie Descarte Irregular</p>
+                    <p class="card-text">
+                        Ajude a cuidar da cidade. Denuncie locais com acúmulo de lixo ou descarte ilegal. 
+                    </p>
+                    <a href="./denuncia.html" class="btn btn-orange rounded-0">Preencher Formulário</a>
+                </div>
+        </div>
+    </div>
+</main>
+
+ <!-- Avaliações -->
+<main class="w-100 pt-lg-4 pb-lg-5">
+        <div class="container pt-5 pb-2 pt-lg-5 pb-lg-5">
+            <div class="w-100 title mb-5 mb-md-5 mb-lg-5 pt-lg-0">
+                <h1 class="fs-4 text-center text-lg-center mb-2 fw-bold">Avaliações dos nossos clientes</h1>
+                <div class="line-orange m-auto"></div>
+            </div>
+            <div class="row pt-3 pt-md-3 pt-lg-3">
+                <div class="col-12 col-md-12 col-lg-4 mb-4 mb-md-4">
+                    <div class="card border-0 shadow p-2">
+                        <div class="card-body">
+                            <div class="w-100 mb-3">
+                                <h4 class="fs-5">Carlos Eduardo Oliveira</h4>
+                                <span class="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                                <span class="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                                <span class="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                                <span class="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                                <span class="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                            </div>
+                            <p>
+                                Vale muito a pena! Fazem a coleta de forma rápida e eficiente, além de serem super atenciosos. Recomendo!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4 mb-4 mb-md-4">
+                    <div class="card border-0 shadow p-2">
+                        <div class="card-body">
+                            <div class="w-100 mb-3">
+                                <h4 class="fs-5">Ivaneide Pereira</h4>
+                                <span class="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                                <span class="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                                <span class="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                                <span class="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                                <span class="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                            </div>
+                            <p>
+                                Muito bom! O serviço de coleta é eficiente e a equipe é super atenciosa. Recomendo para quem busca praticidade e qualidade.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4 mb-4 mb-md-4">
+                    <div class="card border-0 shadow p-2">
+                        <div class="card-body">
+                            <div class="w-100 mb-3">
+                                <h4 class="fs-5">Marcos Andrade</h4>
+                                <span class="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                                <span class="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                                <span class="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                                <span class="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                                <span class="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                            </div>
+                            <p>
+                                Gostei bastante do serviço. A equipe é muito profissional e rápida! Recomendo para quem precisa de uma coleta eficiente e confiável.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+  <!-- Footer -->
+    <footer class="w-100 bg-light">
+        <div class="container pt-5 pt-lg-5 pb-lg-3">
+            <div class="row">
+                <div class="col-12 col-md-3 col-lg-4 mb-3 mb-md-0 mb-lg-0">
+                    <h4 class="fs-4 fw-bold text-uppercase mb-2 mb-md-4 mb-lg-4">ReciclaJoiville</h4>
+                    <p class="text-muted">
+                        Desde 1999 temos, acima de tudo, um grande compromisso: cuidar da nossa cidade.
+                    </p>
+                    <p>
+                        <a href="#" class="text-decoration-none text-muted me-1 me-md-1 me-lg-2"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#" class="text-decoration-none text-muted me-1 me-md-1 me-lg-2"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" class="text-decoration-none text-muted me-1 me-md-1 me-lg-2"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="text-decoration-none text-muted me-1 me-md-1 me-lg-2"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                    </p>
+                </div>
+                <div class="col-12 col-md-3 col-lg-4 pe-lg-0 ps-lg-5 mb-3 mb-md-0 mb-lg-0">
+                    <h4 class="fs-4 fw-bold mb-2 mb-md-4 mb-lg-4">Minha Conta</h4>
+                    <p class="mb-0"><a href="#" class="text-decoration-none text-muted">Meu perfil</a></p>
+                </div>
+                <div class="col-12 col-md-3 col-lg-4 mb-3 mb-md-0 mb-lg-0">
+                    <h4 class="fs-4 fw-bold mb-2 mb-md-4 mb-lg-4">Informações adicionais</h4>
+                    <p class="mb-0"><a href="#" class="text-decoration-none text-muted">Termos e condições</a></p>
+                    <p class="mb-0"><a href="#" class="text-decoration-none text-muted">Politica de privacidade</a></p>
+                    <p class="mb-0"><a href="#" class="text-decoration-none text-muted">Central de ajuda</a></p>
+                    <p class="mb-0"><a href="#" class="text-decoration-none text-muted">Condições de uso</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="w-100 bg-color-orange d-flex justify-content-center align-items-center">
+            <p class="mb-0 pt-1 pb-1">
+                &copy; Todos os direitos reservados
+            </p>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+
+
+</html>
+
