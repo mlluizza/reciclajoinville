@@ -13,3 +13,7 @@
     background-color: var(--bg-orange-hover);
 }
 
+.btn-login {
+    color: var(--bg-white);
+    background-color: var(--bg-orange);
+}
