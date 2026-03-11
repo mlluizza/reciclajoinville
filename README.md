@@ -20,7 +20,6 @@ O ReciclaJoinville é um sistema digital desenvolvido com o objetivo de facilita
 - CSS3: Estilização visual utilizando técnicas de layout responsivo e design moderno.
 - Bootstrap: Framework CSS para garantir a responsividade e a criação de layouts flexíveis.
 - Font Awesome: Ícones para elementos interativos, como botões e avaliações.
-- Grid: Used to organize elements efficiently on the page.
 - Google Fonts: Para importar fontes personalizadas, como "Roboto" e "Open Sans", garantindo uma boa legibilidade.
 
 **📂 Estrutura do Projeto:**
